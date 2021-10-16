@@ -1,5 +1,5 @@
 # azure-fundamentals-notes
-Rough notes created while studying for the Azure Fundamentals (AZ900) exam
+Rough notes created while studying for the Azure Fundamentals (AZ-900) exam
 
 ## Describe Cloud Concepts
 **Regions** are *always* paired with other regions. Paired region is always in same geography, but is always farthest from original region, minimum 300 miles away. This allows for replication outages to have minimal impact on Azure services.
