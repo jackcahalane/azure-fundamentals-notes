@@ -2,6 +2,8 @@
 Rough notes created while studying for the Azure Fundamentals (AZ-900) exam
 
 ## Describe Cloud Concepts
+A **hybrid cloud** is based on an on-premises architecture and a public cloud or a private cloud and a public cloud.
+
 **Regions** are *always* paired with other regions. Paired region is always in same geography, but is always farthest from original region, minimum 300 miles away. This allows for replication outages to have minimal impact on Azure services.
 
 IaaS allows to rent hardware and have control over the OS.
@@ -19,6 +21,8 @@ Need to have a subscription, *then* resource groups to create a resource.
 Can export **ARM Template** from a resource or from a resource group.
 
 Increase default limits for how many of select resouces of each type can be provisioned per Azure Region. Can be accomplished via **ARM**. Lets you increase default limits but doesn't let you exceed hard limits.
+
+What is unique about **Azure Government** is that it is only available in the United States.
 
 ## Describe Core Azure Services
 **Windows Virtual Desktop (WVD)** supports Remote Desktop clients on Windows Desktop, Web, Android, MacOS, iOS, and Microsoft Store Client.
@@ -81,7 +85,6 @@ Azure **Traffic Manager** is a DNS-based traffic load balancer that enables you 
 
 **Application Security Groups** enable you to configure network security as a natural extension of an application structure, allowing you to group VMs and define network security policies based on these groups.
 
-
 **Azure Advanced Threat Protection (ATP)** to directly monitor the domain controller traffic and detect security threats using a sensor.
 
 ## Describe Core Solutions and Management Tools on Azure
@@ -97,7 +100,9 @@ A **stoage account** is required to use **Azure Cloud Shell**.
 
 You should use **Cloud Shell** when you need to run the cmdlet New-AzVm in a scripting environment inside the browser.
 
-**Azure CLI** and **PowerShell** run on Windows, Linux or MacOS.
+**Azure CLI** and **PowerShell** run on Windows, Linux or MacOS. Commands work the same on Mac, Linux and Windows with both Azure CLI and PowerShell.
+
+Both **Azure CLI** and **PowerShell** execute commands in an interactive command-line based environment. Neither supports a GUI interface.
 
 You can use the **Azure mobile app** to run PowerShell commands. The app provides you with access to Azure Cloud Shell, where you can choose between launching Bash and PowerShell and run ad hoc Azure CLI or PowerShell commands.
 
@@ -108,6 +113,8 @@ You should use **Azure CLI** when you need to log in to Azure with az login with
 **Azure Monitor** can use autoscale to add/remove resources as appropriate to minimize costs and ensure performance.
 
 You can use **Service Health** to send an email whenever VM usage exceeds its quota or want to be notified if your App Service exceeds the usage quota.
+
+**Service Health** allows you to implement a webhook on your website to display health incidents.
 
 You should use **Azure Locks** to prevent any users from deleting resources from a subscription with content spanning mutliple resource groups.
 
@@ -128,7 +135,9 @@ The **Microsoft Trust Center** is a central locaiton for the latest info, news, 
 
 An MFA is required for **authentication** when supporting users located in an on-prem **Active Directory** only. Azure MFA Service (Cloud) doesn't support this configuration and requires Azure AD as a security component.
 
-Azure guarantees at least 99.9% availability of **Azure AD Basic and Premium** services. Azure does *not* provide SLE for free tier Azure AD.
+Azure guarantees at least 99.9% availability of **Azure AD Basic and Premium** services. Azure does *not* provide SLA for free tier Azure AD.
+
+**Azure AD Free** edition support self-service password change for cloud users.
 
 **Azure Advisor** can only provide limited recommendations for **Azure AD**. It's not capable of calculating user risk levels or providing cutom AD recommendations. These functions can only be povided by Azure AD **Identity Protection**.
 
