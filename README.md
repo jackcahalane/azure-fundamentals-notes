@@ -50,6 +50,8 @@ Reccommended to have one VNet each for frontend and backend servers.
 
 You should use **VNet peering** or **VPN gateways** to connect Azure Vnets to each other. With VNet peering, you can seamlessly connect two or more VNets in Azure, routing the traffic directly. You can also deploy VPN gateways in each VNet to connect them to each other over the public internet.
 
+Traffic between peered **VNets** is not routed over the public internet. Instead, it is routed through the Microsoft backbone infrastructure without involvement of the public internet.
+
 Azure **storage account** must have Geo-redundant storage or Geo-zone-redundant storage enabled first to achieve automatic replication to another region.
 
 Azure Storage options:
