@@ -141,6 +141,8 @@ Azure guarantees at least 99.9% availability of **Azure AD Basic and Premium** s
 
 **Azure AD Free** edition support self-service password change for cloud users.
 
+You should use **Azure AD Premium** when you want to publish on-premises web apps using Azure AD. This functionality is provided by Azure AD Application Proxy.
+
 **Azure Advisor** can only provide limited recommendations for **Azure AD**. It's not capable of calculating user risk levels or providing cutom AD recommendations. These functions can only be povided by Azure AD **Identity Protection**.
 
 Authentication types supported by both SSPR and MFA are:
