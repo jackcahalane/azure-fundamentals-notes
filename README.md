@@ -4,15 +4,15 @@ Rough notes created while studying for the Azure Fundamentals (AZ-900) exam
 ## Describe Cloud Concepts
 A **hybrid cloud** is based on an on-premises architecture and a public cloud or a private cloud and a public cloud.
 
-**Regions** are *always* paired with other regions. Paired region is always in same geography, but is always farthest from original region, minimum 300 miles away. This allows for replication outages to have minimal impact on Azure services.
+**Regions** are *always* paired with other regions. Paired region is always in the same geography, but is always farthest from the original region, minimum 300 miles away. This allows for replication outages to have minimal impact on Azure services.
 
-IaaS allows to rent hardware and have control over the OS.
+IaaS allows you to rent hardware and have control over the OS.
 
 A **free Azure subscription** is good for 30 days before you have to upgrade.
 
 A **zone** is a geographic grouping of **Azure regions** used to determine billing based on data transfers.
 
-**Azure management groups** provide a level of scope above subscriptions. You organise subscriptions into containers called "management groups" and apply your governance conditions. All subscriptions within a management group automatically inherit conditions applied to management group.
+**Azure management groups** provide a level of scope above subscriptions. You organise subscriptions into containers called "management groups" and apply your governance conditions. All subscriptions within a management group automatically inherit conditions applied to management groups.
 
 **Resource Groups** can contain resources from *any* **region**, not just the region in which the resource group is located.
 
@@ -20,14 +20,14 @@ Need to have a subscription, *then* resource groups to create a resource.
 
 Can export **ARM Template** from a resource or from a resource group.
 
-Increase default limits for how many of select resouces of each type can be provisioned per Azure Region. Can be accomplished via **ARM**. Lets you increase default limits but doesn't let you exceed hard limits.
+Increase default limits for how many of select resources of each type can be provisioned per Azure Region. Can be accomplished via **ARM**. Lets you increase default limits but doesn't let you exceed hard limits.
 
 What is unique about **Azure Government** is that it is only available in the United States.
 
 ## Describe Core Azure Services
 **Windows Virtual Desktop (WVD)** supports Remote Desktop clients on Windows Desktop, Web, Android, MacOS, iOS, and Microsoft Store Client.
 
-Can use **WVD** with your existing Microsoft 365 ir Wubdiws oer-user license. Only pay for VM where WVD runs.
+Can use **WVD** with your existing Microsoft 365 or Windows user license. Only pay for VM where WVD runs.
 
 **Spot VMs** don't use standard SLA for Azure VMs.
 
@@ -43,10 +43,9 @@ Can use **WVD** with your existing Microsoft 365 ir Wubdiws oer-user license. On
 
 **Azure Virtual Network (VNet)** is the fundamental building block for your private network in Azure. VNet enables Azure resources to securely communicate with each other, the Internet, and on-prem networks.
 
-**Azure Virtual Network (VNet)** is a logical isolation of the Azure cloud dedicated to your subcription.
-By default, virtual networks *cannot* communicate with each other.
+**Azure Virtual Network (VNet)** is a logical isolation of the Azure cloud dedicated to your subscription. By default, virtual networks *cannot* communicate with each other.
 
-Reccommended to have one VNet each for frontend and backend servers.
+Recommended to have one VNet each for frontend and backend servers.
 
 You should use **VNet peering** or **VPN gateways** to connect Azure Vnets to each other. With VNet peering, you can seamlessly connect two or more VNets in Azure, routing the traffic directly. You can also deploy VPN gateways in each VNet to connect them to each other over the public internet.
 
@@ -92,13 +91,13 @@ Azure **Traffic Manager** is a DNS-based traffic load balancer that enables you 
 ## Describe Core Solutions and Management Tools on Azure
 **Azure IoT Central** can be managed as a SaaS.
 
-**Azure Sphere** is a secured, high-level application platform with built-in communciation and security features for internet-connected devices. It comprises a secured, connected, crossover microcontroller unit (MCU), a custom high-level Linux-based OS, and a cloud based security service that provides continuous, reliable security. Enables creation of secured, internet-connected devices that can be updated, controlled, monitored, and maintained remotely.
+**Azure Sphere** is a secured, high-level application platform with built-in communication and security features for internet-connected devices. It comprises a secured, connected, crossover microcontroller unit (MCU), a custom high-level Linux-based OS, and a cloud based security service that provides continuous, reliable security. Enables creation of secured, internet-connected devices that can be updated, controlled, monitored, and maintained remotely.
 
 ML models created in **Machine Learning Studio** can't be deployed or managed by Azure ML service. ML Studio solutions are managed in ML Studio and are only deployed as web services.
 
 You can access **Cloud Shell** through the Azure portal or from shell.azure.com, but you cannot use the Azure portal inside Cloud Shell.
 
-A **stoage account** is required to use **Azure Cloud Shell**.
+A **storage account** is required to use **Azure Cloud Shell**.
 
 You should use **Cloud Shell** when you need to run the cmdlet New-AzVm in a scripting environment inside the browser.
 
@@ -110,7 +109,7 @@ You can use the **Azure mobile app** to run PowerShell commands. The app provide
 
 You should use **Azure CLI** when you need to log in to Azure with az login without opening a browser.
 
-**Azure Advisor** integrates with **Azure Security Center** to help prevent, detect and respond to threates to Azure resources. Based on data collected and analysis performed by Azure Advisor, Security Center identifies potential security vulnerabilities and creates recommendations.
+**Azure Advisor** integrates with **Azure Security Center** to help prevent, detect and respond to threats to Azure resources. Based on data collected and analysis performed by Azure Advisor, Security Center identifies potential security vulnerabilities and creates recommendations.
 
 **Azure Monitor** can use autoscale to add/remove resources as appropriate to minimize costs and ensure performance.
 
@@ -118,32 +117,32 @@ You can use **Service Health** to send an email whenever VM usage exceeds its qu
 
 **Service Health** allows you to implement a webhook on your website to display health incidents.
 
-You should use **Azure Locks** to prevent any users from deleting resources from a subscription with content spanning mutliple resource groups.
+You should use **Azure Locks** to prevent any users from deleting resources from a subscription with content spanning multiple resource groups.
 
 Management locks:
 * CanNotDelete
 * Read-only
 
-Use a **lock** when you want to prevent VMs from being deployed in a subscription or resource group. Can create a **Read-Only** resource lock at he scription level to prevent VMs and other resources to be created.
+Use a **lock** when you want to prevent VMs from being deployed in a subscription or resource group. Can create a **Read-Only** resource lock at the subscription level to prevent VMs and other resources to be created.
 
-If a resource group has a **CanNotDelete** lock, then the adminsitrator must remove the lock before it can be deleted.
+If a resource group has a **CanNotDelete** lock, then the administrator must remove the lock before it can be deleted.
 
 When a **lock** is applied to a scope or resource, it applies to all users and roles.
 
 ## Describe Identity, Governance, Privacy and Compliance Features
-The **Microsoft Trust Center** is a central locaiton for the latest info, news, and best practices in security, privacy and compliance.
+The **Microsoft Trust Center** is a central location for the latest info, news, and best practices in security, privacy and compliance.
 
-**Authentication** can use certs to identify a person or service. A certificate have an embedded key that identifies a person or service.
+**Authentication** can use certs to identify a person or service. A certificate has an embedded key that identifies a person or service.
 
 An MFA is required for **authentication** when supporting users located in an on-prem **Active Directory** only. Azure MFA Service (Cloud) doesn't support this configuration and requires Azure AD as a security component.
 
 Azure guarantees at least 99.9% availability of **Azure AD Basic and Premium** services. Azure does *not* provide SLA for free tier Azure AD.
 
-**Azure AD Free** edition support self-service password change for cloud users.
+**Azure AD Free** edition supports self-service password change for cloud users.
 
 You should use **Azure AD Premium** when you want to publish on-premises web apps using Azure AD. This functionality is provided by Azure AD Application Proxy.
 
-**Azure Advisor** can only provide limited recommendations for **Azure AD**. It's not capable of calculating user risk levels or providing cutom AD recommendations. These functions can only be povided by Azure AD **Identity Protection**.
+**Azure Advisor** can only provide limited recommendations for **Azure AD**. It's not capable of calculating user risk levels or providing custom AD recommendations. These functions can only be provided by Azure AD **Identity Protection**.
 
 Authentication types supported by both SSPR and MFA are:
 * Password
@@ -151,11 +150,11 @@ Authentication types supported by both SSPR and MFA are:
 * Voice call
 
 Role Based Access Control (RBAC): 
-* **User Access Administrator**: From the contexy of the management group, this role grants permissions to assign access and policies only.
+* **User Access Administrator**: From the context of the management group, this role grants permissions to assign access and policies only.
 
 **Policies** can be assigned to a resource group.
 
-An **initiative** is a collection of Azure policy definitions, usually grouped with the aim of achieving a single goal. Initiatives are used to siplify managing and assigning policies. The same initiative can be assigned to multiple scopes to include resources, resource groups, subsctiptions or management groups. Policies have to be in same subscription.
+An **initiative** is a collection of Azure policy definitions, usually grouped with the aim of achieving a single goal. Initiatives are used to simplify managing and assigning policies. The same initiative can be assigned to multiple scopes to include resources, resource groups, subscriptions or management groups. Policies have to be in the same subscription.
 
 When an **initiative assignment** is evaluated, all policies in that initiative are evaluated. If you want to evaluate a policy by itself, you should either not assign the policy to an initiative or create an initiative that contains that policy only.
 
@@ -171,9 +170,9 @@ When a **blueprint** is updated and the updated version is published, any assign
 
 **Blueprint Operator** role can assign existing published blueprints, but can't create new blueprint definitions.
 
-**Compliance Manager** helps you track and manage your company's compliance to standard and regulations that are applicable to your organisation sich as ISO 27001, NIST 800-53 and GDPR.
+**Compliance Manager** helps you track and manage your company's compliance to standards and regulations that are applicable to your organisation such as ISO 27001, NIST 800-53 and GDPR.
 
-**Audit reports** allow you to determine how comliant Azure is with regards to GDPR, as well as allow you to view a list of independent assessments on Microsoft cloud services. Reports provide info about compliance related to NIST, GDPR and ISO.
+**Audit reports** allow you to determine how compliant Azure is with regards to GDPR, as well as allow you to view a list of independent assessments on Microsoft cloud services. Reports provide info about compliance related to NIST, GDPR and ISO.
 
 **Health Alerts** when you want you and your team to receive a text when Azure maintenance is planned.
 
@@ -188,11 +187,11 @@ Bandwidth going *out* of Azure will be charged at standard data transfer rates o
 
 Any **Azure Disks** that are attached to a VM will not be deleted if its VM is deleted. 
 
-You still continue to accruse charges for the Azure storage needed for the VM's OS disk and any attached data disks even if your VMs ar ealready stopped.
+You still continue to accrue charges for the Azure storage needed for the VM's OS disk and any attached data disks even if your VMs are already stopped.
 
 Azure does *not* provide an SLA for services in public preview.
 
-Public preview is covered Microsoft Customer Support Services. Private preview is not.
+Public preview is covered by Microsoft Customer Support Services. Private preview is not.
 
 Public previews are a way to obtain customer feedback on new features.
 
